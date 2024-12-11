@@ -21,7 +21,7 @@ export default function PrimaryNavigation() {
           <NavigationIconButtons />
         </div>
       </div>
-      <NavigationMenu isVisible={menu.isVisible} activeLink={menu.activeLink} />
+      <NavigationMenu menu={menu} setMenu={setMenu} />
     </div>
   );
 }

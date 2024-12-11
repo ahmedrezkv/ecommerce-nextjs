@@ -50,7 +50,7 @@ export default {
         shop: ["var(--font-euclid-circular-a)"],
       },
       transitionDuration: {
-        DEFAULT: "400ms",
+        DEFAULT: "300ms",
       },
       zIndex: {
         header: "20",
@@ -60,7 +60,7 @@ export default {
       },
       keyframes: {
         fadeInUp: {
-          "0%": { opacity: "0", transform: "translateY(-1rem)" },
+          "0%": { opacity: "0", transform: "translateY(-1.25rem)" },
           "100%": { opacity: "1", transform: "translateY(0)" },
         },
       },

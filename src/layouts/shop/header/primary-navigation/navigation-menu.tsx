@@ -16,7 +16,7 @@ function SubCollectionCard({ href, title, imageSrc }: SubCollectionCardProps) {
   return (
     <article
       ref={ref}
-      className={`flex flex-col overflow-hidden rounded-md ${inView ? "animate-fadeInUp" : ""}`}
+      className={`group flex flex-col overflow-hidden rounded-md ${inView ? "animate-fadeInUp" : ""}`}
     >
       <NextLink href={href}>
         <Image
@@ -26,35 +26,46 @@ function SubCollectionCard({ href, title, imageSrc }: SubCollectionCardProps) {
           height={375}
           className="mb-4 max-w-56 bg-primary-50"
         />
-        <p className="font-medium">{title}</p>
+        <p className="font-medium transition group-hover:text-primary">
+          {title}
+        </p>
       </NextLink>
     </article>
   );
 }
 
 type NavigationMenuProps = {
-  isVisible: boolean;
-  activeLink: string;
+  menu: {
+    isVisible: boolean;
+    activeLink: string;
+  };
+  setMenu: React.Dispatch<
+    React.SetStateAction<{ isVisible: boolean; activeLink: string }>
+  >;
 };
 
-export default function NavigationMenu({
-  isVisible,
-  activeLink,
-}: NavigationMenuProps) {
+export default function NavigationMenu({ menu, setMenu }: NavigationMenuProps) {
+  const { isVisible, activeLink } = menu;
   const { ref, inView } = useInView();
   const activeCollection = collections.find((c) => c.id === activeLink);
 
   return (
     <div
-      className={`absolute w-full bg-white transition ${isVisible ? "" : "-translate-y-full"}`}
+      className={`absolute w-full bg-white transition duration-500 ${isVisible ? "" : "-translate-y-full"}`}
+      onMouseEnter={() =>
+        setMenu((prevState) => ({ ...prevState, isVisible: true }))
+      }
+      onMouseLeave={() =>
+        setMenu((prevState) => ({ ...prevState, isVisible: false }))
+      }
     >
       <section className="content-container py-8">
-        <div className="mb-8 flex items-center justify-between">
+        <div
+          ref={ref}
+          className={`mb-8 flex items-center justify-between ${inView ? "animate-fadeInUp" : ""}`}
+        >
           <p className="text-2xl font-semibold">{activeCollection?.label}</p>
-          <button
-            ref={ref}
-            className={`rounded-full bg-primary p-5 font-medium uppercase text-white ${inView ? "animate-fadeInUp" : ""}`}
-          >
+          <button className="rounded-full bg-primary p-4 font-medium uppercase text-white transition hover:bg-primary-700">
             {commonContent.layout.header.primaryNavigation.menu.shopAll}{" "}
             {activeCollection?.label}
           </button>

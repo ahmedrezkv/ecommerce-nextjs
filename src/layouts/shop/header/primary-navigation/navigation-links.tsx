@@ -21,7 +21,7 @@ function NavLink({
   return (
     <NextLink
       href={href}
-      className="group inline-flex items-center justify-center gap-1 px-2 py-6 font-medium"
+      className="group inline-flex items-center justify-center gap-1 px-2 py-6 font-medium transition hover:text-primary"
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
     >
@@ -29,7 +29,7 @@ function NavLink({
       {isIconVisible && (
         <ChevronDown
           size={16}
-          className="pt-0.5 transition group-hover:rotate-180"
+          className="pt-0.5 transition group-hover:rotate-180 group-hover:stroke-primary"
         />
       )}
     </NextLink>
@@ -55,7 +55,8 @@ export default function NavigationLinks({ setMenu }: NavigationLinksProps) {
               isIconVisible: true,
               onMouseEnter: () =>
                 setMenu({ isVisible: true, activeLink: value.id }),
-              onMouseLeave: () => setMenu({ isVisible: false, activeLink: "" }),
+              onMouseLeave: () =>
+                setMenu((prevState) => ({ ...prevState, isVisible: false })),
             })}
           >
             {value.label}
