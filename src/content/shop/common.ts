@@ -14,7 +14,22 @@ export const commonContent = {
         faqs: "FAQs",
         orders: "Manage my orders",
       },
-      primaryNavigation: {},
+      primaryNavigation: {
+        menu: {
+          shopAll: "Shop all",
+        },
+        iconButtons: {
+          search: {
+            label: "Search",
+          },
+          user: {
+            label: "User account",
+          },
+          cart: {
+            label: "Cart",
+          },
+        },
+      },
     },
   },
 };

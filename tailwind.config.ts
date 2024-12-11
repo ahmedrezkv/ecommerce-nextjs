@@ -49,6 +49,21 @@ export default {
       fontFamily: {
         shop: ["var(--font-euclid-circular-a)"],
       },
+      transitionDuration: {
+        DEFAULT: "400ms",
+      },
+      zIndex: {
+        header: "20",
+      },
+      animation: {
+        fadeInUp: "fadeInUp 0.8s ease forwards",
+      },
+      keyframes: {
+        fadeInUp: {
+          "0%": { opacity: "0", transform: "translateY(-1rem)" },
+          "100%": { opacity: "1", transform: "translateY(0)" },
+        },
+      },
     },
   },
   plugins: [],
