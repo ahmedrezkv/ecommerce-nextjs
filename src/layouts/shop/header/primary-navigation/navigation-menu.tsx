@@ -2,6 +2,7 @@ import { commonContent } from "@/content/shop/common";
 import { collections } from "@/data/collections";
 import Image from "next/image";
 import NextLink from "next/link";
+import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 
 type SubCollectionCardProps = {
@@ -49,6 +50,17 @@ export default function NavigationMenu({ menu, setMenu }: NavigationMenuProps) {
   const { ref, inView } = useInView();
   const activeCollection = collections.find((c) => c.id === activeLink);
 
+  useEffect(() => {
+    function handleEscKeyDown(e: KeyboardEvent) {
+      console.log(e.key);
+      if (e.key === "Escape") {
+        setMenu({ isVisible: false, activeLink: "" });
+      }
+    }
+    window.addEventListener("keydown", handleEscKeyDown);
+    return () => window.removeEventListener("keydown", handleEscKeyDown);
+  }, [setMenu]);
+
   return (
     <div
       className={`absolute w-full bg-white transition duration-500 ${isVisible ? "" : "-translate-y-full"}`}
@@ -59,16 +71,18 @@ export default function NavigationMenu({ menu, setMenu }: NavigationMenuProps) {
         setMenu((prevState) => ({ ...prevState, isVisible: false }))
       }
     >
-      <section className="content-container py-8">
+      <section className="content-container pb-10 pt-8">
         <div
           ref={ref}
           className={`mb-8 flex items-center justify-between ${inView ? "animate-fadeInUp" : ""}`}
         >
           <p className="text-2xl font-semibold">{activeCollection?.label}</p>
-          <button className="rounded-full bg-primary p-4 font-medium uppercase text-white transition hover:bg-primary-700">
-            {commonContent.layout.header.primaryNavigation.menu.shopAll}{" "}
-            {activeCollection?.label}
-          </button>
+          {activeCollection?.label && (
+            <button className="rounded-full bg-primary p-4 font-medium uppercase text-white transition hover:bg-primary-700">
+              {commonContent.layout.header.primaryNavigation.menu.shopAll}{" "}
+              {activeCollection.label}
+            </button>
+          )}
         </div>
         <div className="flex w-full flex-wrap items-center gap-4">
           {activeCollection?.subCollections.map((subCollection) => (
@@ -76,7 +90,7 @@ export default function NavigationMenu({ menu, setMenu }: NavigationMenuProps) {
               key={subCollection.id}
               title={subCollection.label}
               href={`/collections/${subCollection.id}`}
-              imageSrc={`/assets/images/collections/${subCollection.image}`}
+              imageSrc={`/assets/media/collections/${subCollection.image}`}
             />
           ))}
         </div>
