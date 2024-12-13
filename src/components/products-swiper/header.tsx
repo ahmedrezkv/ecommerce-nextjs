@@ -1,5 +1,5 @@
 import { commonContent } from "@/content/common";
-import NextLink from "next/link";
+import Link from "next/link";
 
 type HeaderProps = {
   heading: string;
@@ -10,12 +10,12 @@ export default function Header({ heading, allPageHref }: HeaderProps) {
   return (
     <header className="flex items-center justify-between gap-4">
       <h2 className="text-4xl font-semibold">{heading}</h2>
-      <NextLink
+      <Link
         href={allPageHref}
         className="border-b-2 border-b-current transition hover:text-primary"
       >
         {commonContent.components.productsSwiper.header.seeAll}
-      </NextLink>
+      </Link>
     </header>
   );
 }

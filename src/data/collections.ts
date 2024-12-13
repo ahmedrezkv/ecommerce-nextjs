@@ -6,6 +6,12 @@ export const collections = [
     subCollections: [],
   },
   {
+    id: "sofa-beds",
+    label: "Sofa Beds",
+    image: "",
+    subCollections: [],
+  },
+  {
     id: "sofas",
     label: "Sofas",
     image: "",
@@ -120,43 +126,6 @@ export const collections = [
     ],
   },
   {
-    id: "outdoor",
-    label: "Outdoor",
-    image: "outdoor.webp",
-    subCollections: [
-      {
-        id: "outdoor-lounge-sets",
-        label: "Outdoor Lounge Sets",
-        image: "outdoor-lounge-sets.webp",
-      },
-      {
-        id: "outdoor-dinning-sets",
-        label: "Outdoor Dinning Sets",
-        image: "outdoor-dinning-sets.webp",
-      },
-      {
-        id: "outdoor-lounge-chairs",
-        label: "Outdoor Lounge Chairs",
-        image: "outdoor-lounge-chairs.webp",
-      },
-      {
-        id: "outdoor-coffee-tables",
-        label: "Outdoor Coffee Tables",
-        image: "outdoor-coffee-tables.webp",
-      },
-      {
-        id: "outdoor-dinning-tables",
-        label: "Outdoor Dinning Tables",
-        image: "outdoor-dinning-tables.webp",
-      },
-      {
-        id: "outdoor-dinning-seating",
-        label: "Outdoor Dinning Seating",
-        image: "outdoor-dinning-seating.webp",
-      },
-    ],
-  },
-  {
     id: "living-room",
     label: "Living Room",
     image: "",
@@ -210,6 +179,43 @@ export const collections = [
         id: "sofa-covers",
         label: "Sofa Covers",
         image: "sofa-covers.webp",
+      },
+    ],
+  },
+  {
+    id: "outdoor",
+    label: "Outdoor",
+    image: "outdoor.webp",
+    subCollections: [
+      {
+        id: "outdoor-lounge-sets",
+        label: "Outdoor Lounge Sets",
+        image: "outdoor-lounge-sets.webp",
+      },
+      {
+        id: "outdoor-dinning-sets",
+        label: "Outdoor Dinning Sets",
+        image: "outdoor-dinning-sets.webp",
+      },
+      {
+        id: "outdoor-lounge-chairs",
+        label: "Outdoor Lounge Chairs",
+        image: "outdoor-lounge-chairs.webp",
+      },
+      {
+        id: "outdoor-coffee-tables",
+        label: "Outdoor Coffee Tables",
+        image: "outdoor-coffee-tables.webp",
+      },
+      {
+        id: "outdoor-dinning-tables",
+        label: "Outdoor Dinning Tables",
+        image: "outdoor-dinning-tables.webp",
+      },
+      {
+        id: "outdoor-dinning-seating",
+        label: "Outdoor Dinning Seating",
+        image: "outdoor-dinning-seating.webp",
       },
     ],
   },

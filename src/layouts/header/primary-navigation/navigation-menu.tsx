@@ -1,7 +1,7 @@
 import { commonContent } from "@/content/common";
 import { collections } from "@/data/collections";
 import Image from "next/image";
-import NextLink from "next/link";
+import Link from "next/link";
 import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 
@@ -19,7 +19,7 @@ function SubCollectionCard({ href, title, imageSrc }: SubCollectionCardProps) {
       ref={ref}
       className={`group flex flex-col overflow-hidden rounded-md ${inView ? "animate-fadeInUp" : ""}`}
     >
-      <NextLink href={href}>
+      <Link href={href}>
         <Image
           src={imageSrc}
           alt={title}
@@ -30,7 +30,7 @@ function SubCollectionCard({ href, title, imageSrc }: SubCollectionCardProps) {
         <p className="font-medium transition group-hover:text-primary">
           {title}
         </p>
-      </NextLink>
+      </Link>
     </article>
   );
 }
@@ -83,16 +83,17 @@ export default function NavigationMenu({ menu, setMenu }: NavigationMenuProps) {
             </button>
           )}
         </div>
-        <div className="flex w-full flex-wrap items-center gap-4">
+        <ul className="flex w-full flex-wrap items-center gap-4">
           {activeCollection?.subCollections.map((subCollection) => (
-            <SubCollectionCard
-              key={subCollection.id}
-              title={subCollection.label}
-              href={`/collections/${subCollection.id}`}
-              imageSrc={`/assets/media/collections/${subCollection.image}`}
-            />
+            <li key={subCollection.id}>
+              <SubCollectionCard
+                title={subCollection.label}
+                href={`/collections/${subCollection.id}`}
+                imageSrc={`/assets/media/collections/${subCollection.image}`}
+              />
+            </li>
           ))}
-        </div>
+        </ul>
       </section>
     </div>
   );

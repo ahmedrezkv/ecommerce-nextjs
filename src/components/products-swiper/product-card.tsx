@@ -1,7 +1,7 @@
 import { paths } from "@/paths";
 import { Star } from "lucide-react";
 import Image from "next/image";
-import NextLink from "next/link";
+import Link from "next/link";
 
 type ProductCardProps = {
   id: string;
@@ -29,7 +29,7 @@ export default function ProductCard({
   };
 
   return (
-    <NextLink
+    <Link
       href={`${paths.products.index}/${id}`}
       className="inline-block snap-start"
     >
@@ -64,6 +64,6 @@ export default function ProductCard({
         </div>
         <p>{price}</p>
       </article>
-    </NextLink>
+    </Link>
   );
 }

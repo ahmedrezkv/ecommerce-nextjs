@@ -1,4 +1,5 @@
 import { euclidCircularAFont } from "@/helpers/fonts";
+import Footer from "./footer";
 import Header from "./header";
 
 export default function MainLayout({
@@ -11,6 +12,7 @@ export default function MainLayout({
       <body className="font-main antialiased">
         <Header />
         <main>{children}</main>
+        <Footer />
       </body>
     </html>
   );

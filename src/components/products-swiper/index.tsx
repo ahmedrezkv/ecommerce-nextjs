@@ -32,7 +32,7 @@ export default function ProductsSwiper({
 
   return (
     <section>
-      <div className="content-container flex flex-col gap-8 py-10">
+      <div className="content-container flex flex-col gap-8 py-14">
         <Header heading={heading} allPageHref={allPageHref} />
         <TabsNavigation
           tabs={list}
