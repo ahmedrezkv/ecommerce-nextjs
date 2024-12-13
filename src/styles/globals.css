@@ -7,3 +7,21 @@
     @apply mx-auto max-w-app-content px-app-px;
   }
 }
+
+@layer utilities {
+  .scroll-bar::-webkit-scrollbar {
+    @apply h-2 w-2;
+  }
+  .scroll-bar::-webkit-scrollbar-track {
+    @apply rounded-full bg-accent;
+  }
+  .scroll-bar::-webkit-scrollbar-thumb {
+    @apply rounded-full border-2 border-solid border-accent bg-accent-500;
+  }
+  .scroll-bar::-webkit-scrollbar-thumb:hover {
+    @apply bg-accent-700;
+  }
+  .scroll-bar::-webkit-scrollbar-corner {
+    @apply bg-accent;
+  }
+}

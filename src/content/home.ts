@@ -10,4 +10,7 @@ export const homeContent = {
       warranty: "World-class warranty",
     },
   },
+  bestSellers: {
+    heading: "Best Sellers",
+  },
 };

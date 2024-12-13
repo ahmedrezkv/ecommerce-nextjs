@@ -1,4 +1,5 @@
-import { homeContent } from "@/content/shop/home";
+import { homeContent } from "@/content/home";
+import BestSellers from "./best-sellers";
 import HeroSection from "./hero";
 
 export default function Home() {
@@ -6,6 +7,7 @@ export default function Home() {
     <>
       <h1 className="sr-only">{homeContent.heading1}</h1>
       <HeroSection />
+      <BestSellers />
     </>
   );
 }

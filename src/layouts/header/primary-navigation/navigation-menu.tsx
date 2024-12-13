@@ -1,4 +1,4 @@
-import { commonContent } from "@/content/shop/common";
+import { commonContent } from "@/content/common";
 import { collections } from "@/data/collections";
 import Image from "next/image";
 import NextLink from "next/link";
@@ -52,7 +52,6 @@ export default function NavigationMenu({ menu, setMenu }: NavigationMenuProps) {
 
   useEffect(() => {
     function handleEscKeyDown(e: KeyboardEvent) {
-      console.log(e.key);
       if (e.key === "Escape") {
         setMenu({ isVisible: false, activeLink: "" });
       }

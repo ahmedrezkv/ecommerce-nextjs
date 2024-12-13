@@ -47,7 +47,7 @@ export default {
         "app-px": "1.25rem",
       },
       fontFamily: {
-        shop: ["var(--font-euclid-circular-a)"],
+        main: ["var(--font-euclid-circular-a)"],
       },
       transitionDuration: {
         DEFAULT: "300ms",

@@ -32,4 +32,11 @@ export const commonContent = {
       },
     },
   },
+  components: {
+    productsSwiper: {
+      seeAll: "See All",
+      slideRight: "Slide Right",
+      slideLeft: "Slide Left",
+    },
+  },
 };

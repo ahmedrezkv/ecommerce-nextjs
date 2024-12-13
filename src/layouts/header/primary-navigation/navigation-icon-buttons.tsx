@@ -1,4 +1,4 @@
-import { commonContent } from "@/content/shop/common";
+import { commonContent } from "@/content/common";
 import { CircleUser, Search, ShoppingCart } from "lucide-react";
 
 export default function NavigationIconButtons() {

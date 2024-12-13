@@ -1,4 +1,4 @@
-import { homeContent } from "@/content/shop/home";
+import { homeContent } from "@/content/home";
 import { CalendarDays, ShieldCheck, Truck } from "lucide-react";
 
 export default function HeroSection() {
@@ -20,7 +20,7 @@ export default function HeroSection() {
           </button>
         </div>
       </div>
-      <div className="flex items-center justify-center gap-4 bg-primary-50 py-4">
+      <div className="flex items-center justify-center gap-4 bg-primary-50 py-4 text-sm">
         <div className="flex items-center gap-2">
           <Truck size={20} />
           <span>{homeContent.hero.features.delivery}</span>

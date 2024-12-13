@@ -50,7 +50,7 @@ export default function NavigationLinks({ setMenu }: NavigationLinksProps) {
         return (
           <NavLink
             key={key}
-            href={`${paths.shop.collections.index}/${value.id}`}
+            href={`${paths.collections.index}/${value.id}`}
             {...(hasSubCollections && {
               isIconVisible: true,
               onMouseEnter: () =>
