@@ -52,7 +52,7 @@ export default function TabsNavigation({
           onClick={handleScrollLeft}
         >
           <span className="sr-only">
-            {commonContent.components.productsSwiper.slideLeft}
+            {commonContent.components.productsSwiper.tabsNavigation.slideLeft}
           </span>
           <ChevronLeft size={24} />
         </button>
@@ -61,7 +61,7 @@ export default function TabsNavigation({
           onClick={handleScrollRight}
         >
           <span className="sr-only">
-            {commonContent.components.productsSwiper.slideRight}
+            {commonContent.components.productsSwiper.tabsNavigation.slideRight}
           </span>
           <ChevronRight size={24} />
         </button>

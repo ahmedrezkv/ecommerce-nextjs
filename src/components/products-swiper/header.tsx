@@ -14,7 +14,7 @@ export default function Header({ heading, allPageHref }: HeaderProps) {
         href={allPageHref}
         className="border-b-2 border-b-current transition hover:text-primary"
       >
-        {commonContent.components.productsSwiper.seeAll}
+        {commonContent.components.productsSwiper.header.seeAll}
       </NextLink>
     </header>
   );

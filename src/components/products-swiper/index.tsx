@@ -1,3 +1,4 @@
+import { commonContent } from "@/content/common";
 import { Product, ProductsSwiperList } from "@/types/types";
 import { useRef } from "react";
 import Header from "./header";
@@ -46,17 +47,24 @@ export default function ProductsSwiper({
         >
           {new Array(15)
             .fill(list.find((c) => c.id === selectedTab)?.products[0])
-            .map((product: Product, index) => (
-              <ProductCard
-                key={index}
-                id={product.id}
-                title={product.title}
-                image={product.images[0]}
-                tags={product.tags}
-                rating={product.reviews.overallRating}
-                price={product.price}
-              />
-            ))}
+            .map((product: Product, index) => {
+              const price =
+                product.options.sizes.length > 1
+                  ? `${commonContent.components.productsSwiper.productCard.from} ${product.priceInfo.symbol}${product.options.sizes.reduce((acc, curr) => (curr.price.amount < acc ? curr.price.amount : acc), product.options.sizes[0].price.amount)}`
+                  : `${product.priceInfo.symbol}${product.options.sizes[0].price.amount}`;
+
+              return (
+                <ProductCard
+                  key={index}
+                  id={product.id}
+                  title={product.title}
+                  image={product.images[0]}
+                  tags={product.tags}
+                  rating={product.reviews.overallRating}
+                  price={price}
+                />
+              );
+            })}
         </div>
       </div>
     </section>

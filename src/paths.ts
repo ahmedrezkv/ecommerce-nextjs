@@ -15,4 +15,7 @@ export const paths = {
     index: "/collections",
     bestSellers: "/collections/best-sellers",
   },
+  products: {
+    index: "/products",
+  },
 };

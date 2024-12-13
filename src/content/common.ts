@@ -34,9 +34,16 @@ export const commonContent = {
   },
   components: {
     productsSwiper: {
-      seeAll: "See All",
-      slideRight: "Slide Right",
-      slideLeft: "Slide Left",
+      header: {
+        seeAll: "See All",
+      },
+      tabsNavigation: {
+        slideRight: "Slide Right",
+        slideLeft: "Slide Left",
+      },
+      productCard: {
+        from: "From",
+      },
     },
   },
 };

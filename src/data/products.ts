@@ -5,20 +5,55 @@ export const products = {
       title: "Koala Mattress",
       description:
         "Australia's top-rated mattress, enhanced support and comfort.",
-      price: {
-        amount: 1250,
+      images: ["koala-mattress-1.webp"],
+      priceInfo: {
         currency: "USD",
         symbol: "$",
       },
-      images: ["koala-mattress-1.webp"],
       options: {
         sizes: [
-          { id: "single", label: "Single" },
-          { id: "king-single", label: "King Single" },
-          { id: "double", label: "Double" },
-          { id: "queen", label: "Queen" },
-          { id: "king", label: "King" },
-          { id: "super-king", label: "Super King" },
+          {
+            id: "single",
+            label: "Single",
+            price: {
+              amount: 850,
+            },
+          },
+          {
+            id: "king-single",
+            label: "King Single",
+            price: {
+              amount: 990,
+            },
+          },
+          {
+            id: "double",
+            label: "Double",
+            price: {
+              amount: 1090,
+            },
+          },
+          {
+            id: "queen",
+            label: "Queen",
+            price: {
+              amount: 1250,
+            },
+          },
+          {
+            id: "king",
+            label: "King",
+            price: {
+              amount: 1450,
+            },
+          },
+          {
+            id: "super-king",
+            label: "Super King",
+            price: {
+              amount: 1650,
+            },
+          },
         ],
       },
       tags: [
