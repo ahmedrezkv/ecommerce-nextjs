@@ -10,12 +10,14 @@ export default function BestSellers() {
   const [selectedTab, setSelectedTab] = useState<string>("featured");
 
   return (
-    <ProductsSwiper
-      heading={homeContent.bestSellers.heading}
-      allPageHref={paths.collections.bestSellers}
-      list={bestSellers}
-      selectedTab={selectedTab}
-      setSelectedTab={setSelectedTab}
-    />
+    <div className="mt-8">
+      <ProductsSwiper
+        heading={homeContent.bestSellers.heading}
+        allPageHref={paths.collections.bestSellers}
+        list={bestSellers}
+        selectedTab={selectedTab}
+        setSelectedTab={setSelectedTab}
+      />
+    </div>
   );
 }

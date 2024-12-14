@@ -13,4 +13,8 @@ export const homeContent = {
   bestSellers: {
     heading: "Best Sellers",
   },
+  seenIn: {
+    asSeenIn: "As seen in",
+    seenInCompany: "Seen in company",
+  },
 };

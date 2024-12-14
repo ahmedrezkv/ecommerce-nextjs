@@ -31,7 +31,7 @@ export default function ProductCard({
   return (
     <Link
       href={`${paths.products.index}/${id}`}
-      className="inline-block snap-start"
+      className="group inline-block snap-start"
     >
       <article className="flex flex-col gap-2">
         <div className="relative aspect-[1.33] min-h-60 overflow-hidden rounded-lg">
@@ -39,6 +39,7 @@ export default function ProductCard({
             src={`/assets/media/products/${id}/${image}`}
             alt={title}
             fill
+            className="transition group-hover:opacity-80"
           />
           <div className="absolute start-3 top-3 flex flex-wrap items-center gap-3">
             {tags.map((tag) => (
