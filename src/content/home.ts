@@ -17,4 +17,17 @@ export const homeContent = {
     asSeenIn: "As seen in",
     seenInCompany: "Seen in company",
   },
+  featuredReviews: {
+    heading: {
+      part1: "Over",
+      part2: "500,000",
+      part3: "happy customers",
+      part4: "and more than",
+      part5: "100,000",
+      part6: "five-star reviews",
+    },
+    reviewCard: {
+      shop: "Shop",
+    },
+  },
 };

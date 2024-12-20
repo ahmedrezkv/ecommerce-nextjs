@@ -17,7 +17,7 @@ function SubCollectionCard({ href, title, imageSrc }: SubCollectionCardProps) {
   return (
     <article
       ref={ref}
-      className={`group flex flex-col overflow-hidden rounded-md ${inView ? "animate-fadeInUp" : ""}`}
+      className={`group flex flex-col overflow-hidden rounded-lg ${inView ? "animate-fadeInUp" : ""}`}
     >
       <Link href={href}>
         <Image

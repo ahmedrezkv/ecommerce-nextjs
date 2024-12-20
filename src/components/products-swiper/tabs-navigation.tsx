@@ -1,5 +1,4 @@
-import { commonContent } from "@/content/common";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import SwiperButtons from "./swiper-buttons";
 
 type TabProps = {
   isSelected: boolean;
@@ -46,26 +45,10 @@ export default function TabsNavigation({
           </Tab>
         ))}
       </nav>
-      <div className="flex items-center gap-2">
-        <button
-          className="rounded-full bg-primary-50 p-2 transition hover:bg-primary-100"
-          onClick={handleScrollLeft}
-        >
-          <span className="sr-only">
-            {commonContent.components.productsSwiper.tabsNavigation.slideLeft}
-          </span>
-          <ChevronLeft size={24} />
-        </button>
-        <button
-          className="rounded-full bg-primary-50 p-2 transition hover:bg-primary-100"
-          onClick={handleScrollRight}
-        >
-          <span className="sr-only">
-            {commonContent.components.productsSwiper.tabsNavigation.slideRight}
-          </span>
-          <ChevronRight size={24} />
-        </button>
-      </div>
+      <SwiperButtons
+        onClickRightButton={handleScrollRight}
+        onClickLeftButton={handleScrollLeft}
+      />
     </div>
   );
 }

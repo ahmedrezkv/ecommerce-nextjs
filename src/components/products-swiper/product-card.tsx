@@ -57,6 +57,9 @@ export default function ProductCard({
             {new Array(Math.ceil(rating.score)).fill(null).map((s, i) => (
               <Star key={i} size={14} className="fill-black" />
             ))}
+            {new Array(5 - Math.ceil(rating.score)).fill(null).map((s, i) => (
+              <Star key={i} size={14} />
+            ))}
           </div>
           <p className="text-sm font-medium">
             <span>{rating.score}</span>&nbsp;

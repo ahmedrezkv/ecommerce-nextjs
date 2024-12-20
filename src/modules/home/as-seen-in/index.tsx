@@ -13,13 +13,13 @@ export default function AsSeenIn() {
   return (
     <section>
       <div className="content-container py-8">
-        <div className="flex overflow-hidden rounded-lg bg-primary-50 [&>ul]:hover:[animation-play-state:paused]">
+        <div className="flex overflow-hidden rounded-xl bg-primary-50 [&>ul]:hover:[animation-play-state:paused]">
           <div className="relative z-[1] flex items-center justify-center bg-primary-50 px-8 after:absolute after:-end-full after:z-[1] after:h-full after:w-full after:bg-gradient-to-r after:from-primary-50">
-            <p className="whitespace-nowrap text-xl font-semibold">
+            <h2 className="whitespace-nowrap text-xl font-semibold">
               {homeContent.asSeenIn.asSeenIn}
-            </p>
+            </h2>
           </div>
-          <ul className="animate-scroll-infinite flex py-12">
+          <ul className="flex animate-scroll-infinite py-12">
             {images.map((image) => (
               <li key={image.file} className="px-20">
                 <Image
@@ -32,7 +32,7 @@ export default function AsSeenIn() {
               </li>
             ))}
           </ul>
-          <ul aria-hidden="true" className="animate-scroll-infinite flex py-12">
+          <ul aria-hidden="true" className="flex animate-scroll-infinite py-12">
             {images.map((image) => (
               <li key={image.file} className="px-20">
                 <Image

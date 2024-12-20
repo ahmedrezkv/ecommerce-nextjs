@@ -1,6 +1,7 @@
 import { homeContent } from "@/content/home";
 import AsSeenIn from "./as-seen-in";
 import BestSellers from "./best-sellers";
+import FeaturedReviews from "./featured-reviews";
 import HeroSection from "./hero";
 
 export default function Home() {
@@ -10,6 +11,7 @@ export default function Home() {
       <HeroSection />
       <BestSellers />
       <AsSeenIn />
+      <FeaturedReviews />
     </>
   );
 }

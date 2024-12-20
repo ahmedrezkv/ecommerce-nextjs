@@ -57,7 +57,7 @@ export default {
       },
       animation: {
         fadeInUp: "fadeInUp 0.8s ease forwards",
-        "scroll-infinite": "scroll 12s linear infinite",
+        "scroll-infinite": "scroll 20s linear infinite",
       },
       keyframes: {
         fadeInUp: {
