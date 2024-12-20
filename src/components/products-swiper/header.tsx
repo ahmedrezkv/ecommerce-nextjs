@@ -8,7 +8,7 @@ type HeaderProps = {
 
 export default function Header({ heading, allPageHref }: HeaderProps) {
   return (
-    <header className="flex items-center justify-between gap-4">
+    <header className="flex items-center justify-between gap-8">
       <h2 className="text-4xl font-semibold">{heading}</h2>
       <Link
         href={allPageHref}

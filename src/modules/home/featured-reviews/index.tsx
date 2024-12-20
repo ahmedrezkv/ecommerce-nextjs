@@ -16,7 +16,7 @@ export default function FeaturedReviews() {
   }
   return (
     <section>
-      <div className="content-container py-8">
+      <div className="content-container flex flex-col gap-8 py-10">
         <Header
           handleScrollRight={handleScrollRight}
           handleScrollLeft={handleScrollLeft}

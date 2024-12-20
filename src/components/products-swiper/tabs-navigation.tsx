@@ -33,7 +33,7 @@ export default function TabsNavigation({
   handleScrollLeft,
 }: TabsNavigationProps) {
   return (
-    <div className="flex items-center justify-between gap-4">
+    <div className="flex items-center justify-between gap-8">
       <nav className="flex items-center gap-4">
         {tabs.map((tab) => (
           <Tab

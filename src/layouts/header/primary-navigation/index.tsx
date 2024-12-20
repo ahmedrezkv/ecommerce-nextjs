@@ -16,7 +16,7 @@ export default function PrimaryNavigation() {
     <>
       <div className="relative z-[1]">
         <div className="relative z-[1] bg-primary-50">
-          <div className="content-container flex items-center justify-between gap-4">
+          <div className="content-container flex items-center justify-between gap-8">
             <Logo color="primary" />
             <NavigationLinks setMenu={setMenu} />
             <NavigationIconButtons />

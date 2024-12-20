@@ -12,7 +12,7 @@ export default function Header({
   handleScrollLeft,
 }: HeaderProps) {
   return (
-    <header className="mb-8 flex items-end justify-between gap-4">
+    <header className="flex items-end justify-between gap-8">
       <div>
         <div className="mb-4 flex items-center gap-1">
           {new Array(5).fill(null).map((_, i) => (
